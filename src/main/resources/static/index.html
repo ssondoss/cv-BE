@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 50px;
+        }
+        .text {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .text::after {
+            content: '';
+            transition: transform 0.3s ease-out;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+
+            width: 100%;
+            height: 3px;
+            background-color: red;
+        }
+
+        .text:hover::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="text">hover</div>
+</div>
+</body>
+
+</html>
