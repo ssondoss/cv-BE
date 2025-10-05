@@ -1,6 +1,8 @@
 package com.example.cv;
 
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
+import com.openhtmltopdf.svgsupport.BatikSVGDrawer;
+
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.File;
@@ -27,6 +29,7 @@ public class Builder {
 
         builder.withHtmlContent(html,null);
         builder.toStream(fos);
+        builder.useSVGDrawer(new BatikSVGDrawer());
         builder.run();
         fos.close();
         System.out.println("Saving to: " + new File("index-output.pdf").getAbsolutePath());
