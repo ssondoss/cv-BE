@@ -1,10 +1,9 @@
-package com.example.cv;
+package com.cvbuilder;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
-import java.util.Locale;
 
 @SpringBootApplication
 public class Application {

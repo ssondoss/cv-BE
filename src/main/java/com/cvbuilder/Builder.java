@@ -1,4 +1,4 @@
-package com.example.cv;
+package com.cvbuilder;
 
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
 import com.openhtmltopdf.svgsupport.BatikSVGDrawer;
